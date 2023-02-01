@@ -4,15 +4,16 @@ require('./db/connect')
 const app = express()
 const tasks = require('./router/tasks')
 //  middleware
+
 app.use(express.json())
 // routes
 app.get('/hello', (req, res) => {
-	res.status(200).send('Home Page')
+	res.status(200).send('Test Page')
 })
 
 app.use('/api/v1/tasks', tasks)
 
-const PORT = 3000
-app.listen(PORT, () => {
-	console.log(`Server is listening on port ${PORT}...`)
+const port = 3000
+app.listen(port, () => {
+	console.log(`Server is listening on port ${port}...`)
 })
