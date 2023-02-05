@@ -1,4 +1,3 @@
-/** @format */
 const express = require('express')
 const app = express()
 const tasks = require('./router/tasks')
@@ -7,7 +6,6 @@ require('dotenv').config()
 //  middleware
 app.use(express.json())
 app.use('/api/v1/tasks', tasks)
-
 // routes
 app.get('/hello', (req, res) => {
 	res.status(200).send('Test Page')
